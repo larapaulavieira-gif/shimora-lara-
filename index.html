@@ -1,1 +1,53 @@
+import time
 
+def linha():
+    print("-" * 60)
+
+def conferir_agrinho():
+    linha()
+    print("🌾 AJUDANTE DA FAZENDA INTELIGENTE - AGRINHO 2026 🌾")
+    print("      Tema: Inovação, Tecnologia e Sustentabilidade no Campo")
+    linha()
+    time.sleep(1)
+
+    # Coleta de dados
+    nome_fazenda = input("Digite o nome da sua fazenda/escola: ")
+    
+    print("\nResponda com SIM (S) ou NÃO (N):")
+    
+    agua = input("1. Você utiliza técnicas de captação de água da chuva ou irrigação gota a gota? ").strip().upper()
+    tecnologia = input("2. Utiliza sensores, drones ou aplicativos para monitorar a plantação? ").strip().upper()
+    agrotoxico = input("3. Faz o manejo correto de defensivos agrícolas ou prioriza orgânicos? ").strip().upper()
+    energia = input("4. A fazenda utiliza alguma fonte de energia limpa (solar, eólica, biomassa)? ").strip().upper()
+    reciclagem = input("5. Há descarte correto de embalagens e reciclagem de lixo na propriedade? ").strip().upper()
+
+    # Cálculo da pontuação
+    pontos = 0
+    respostas = [agua, tecnologia, agrotoxico, energia, reciclagem]
+    
+    for resp in respostas:
+        if resp == 'S' or resp == 'SIM':
+            pontos += 20
+
+    # Resultado e Feedback
+    linha()
+    print(f"📊 RELATÓRIO DE SUSTENTABILIDADE: {nome_fazenda.upper()}")
+    linha()
+    print(f"Sua pontuação de sustentabilidade: {pontos}%")
+    
+    if pontos == 100:
+        print("🏆 Excelente! Sua fazenda é um modelo de Fazenda Inteligente para o Agrinho 2026!")
+        print("💡 Dica: Compartilhe suas práticas com a comunidade para inspirar outros produtores.")
+    elif pontos >= 60:
+        print("🌱 Muito bom! Você está no caminho certo para a sustentabilidade.")
+        print("💡 Dica: Que tal investir um pouco mais em energias renováveis ou tecnologia de precisão?")
+    else:
+        print("⚠️ Atenção! Pequenas mudanças podem gerar grandes impactos na sua produtividade e no meio ambiente.")
+        print("💡 Dica: Comece aplicando a rotação de culturas e a captação de água da chuva.")
+    
+    linha()
+    print("Obrigado por participar do projeto Agrinho 2026! O futuro do campo está em nossas mãos. 🚜✨")
+    linha()
+
+if __name lara de paula __ == "__main__":
+    conferir_agrinho()
